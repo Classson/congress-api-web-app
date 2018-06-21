@@ -1,3 +1,15 @@
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(function(position) {
+      const currentLat = position.coords.latitude;
+      const currentLong = position.coords.longitude;
+      console.log(currentLat)
+
+
+
+
+
+    })}
+
 function getSunInfo() {
 
   dataObject = new XMLHttpRequest();
@@ -6,8 +18,8 @@ function getSunInfo() {
   dataObject.send();
   dataObject.onload = function() {
 
-    congressInfo = JSON.parse(dataObject.responseText);
-    console.log(congressInfo);
+    sunInfo = JSON.parse(dataObject.responseText);
+    console.log(sunInfo);
   }
 }
 

@@ -1,14 +1,14 @@
 if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(function(position) {
-      const currentLat = position.coords.latitude;
-      const currentLong = position.coords.longitude;
-      console.log(currentLat)
+  navigator.geolocation.getCurrentPosition(function (position) {
+      let currentLat = position.coords.latitude;
+      let currentLong = position.coords.longitude;
 
+        let sunUrl = "https://api.sunrise-sunset.org/json?lat=" + currentLat + "&lng=" + currentLong + "&date=today";
+      
       function getSunInfo() {
-        sunUrl = "https://api.sunrise-sunset.org/json?lat=" + currentLat + "&lng=" + currentLong + "&date=today";
         dataObject = new XMLHttpRequest();
-
         dataObject.open('GET', sunUrl, true);
+
         dataObject.send();
         dataObject.onload = function() {
 

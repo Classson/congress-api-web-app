@@ -8,18 +8,30 @@ body {
     height: 100vh;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    align-items: center;
-    
+    align-items: center; 
 }
 
  h1 {
    text-align: center;
  }
 
- #set {
-   color: rgb(193, 97, 87);
- }
-
  #rise {
      color: rgb(107, 198, 255); 
+     position: relative;
+     animation-name: up;
+     animation-duration: 4s;
+}
+
+ #set {
+     color: rgb(193, 97, 87);
+     animation-name: down;
+}
+
+@keyframes up {
+    0% {
+        top: 100px;
+    }
+    100% {
+        top: 0px; 
+    }
 }

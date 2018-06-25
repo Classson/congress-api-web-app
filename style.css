@@ -15,11 +15,16 @@ body {
    text-align: center;
  }
 
+h2 {
+    text-align: center;
+}
+
  #rise {
      color: rgb(107, 198, 255); 
      position: relative;
      animation-name: up;
      animation-duration: 4s;
+     animation-fill-mode:forwards;
 }
 
  #set {
@@ -27,6 +32,7 @@ body {
      position: relative;
      animation-name: down;
      animation-duration: 4s;
+     animation-fill-mode:forwards;
 }
 
 @keyframes up {

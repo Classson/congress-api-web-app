@@ -14,8 +14,14 @@ if (navigator.geolocation) {
 
           sunInfo = JSON.parse(dataObject.responseText);
           console.log(sunInfo);
+            console.log(sunInfo.results.sunset);
+        
+        document.getElementById(sunInfo.results.sunset).innerHTML = sunSetTime;
         }
       }
 
       getSunInfo();
+
     })}
+
+

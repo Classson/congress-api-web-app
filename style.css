@@ -24,14 +24,26 @@ body {
 
  #set {
      color: rgb(193, 97, 87);
+     position: relative;
      animation-name: down;
+     animation-duration: 4s;
 }
 
 @keyframes up {
     0% {
-        top: 100px;
+        bottom: 0px;
     }
     100% {
-        top: 0px; 
+        bottom: 100px; 
     }
+}
+
+@keyframes down {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: 100px; 
+    }
+    
 }

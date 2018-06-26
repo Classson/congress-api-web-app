@@ -16,9 +16,10 @@ if (navigator.geolocation) {
           console.log(sunInfo);
         
         sunSet = sunInfo.results.sunset; 
-        console.log(sunSet);
+        sunRise = sunInfo.results.sunrise;
             
         document.getElementById('sunSetTime').innerHTML = sunSet;
+        document.getElementById('sunRiseTime').innerHTML = sunRise;
         }
       }
 

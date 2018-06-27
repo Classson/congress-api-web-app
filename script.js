@@ -28,3 +28,5 @@ if (navigator.geolocation) {
     })}
 
 
+const rise = document.querySelector('.rise')
+rise.addEventListener('click', _ => rise.classList.toggle('active'));

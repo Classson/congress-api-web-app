@@ -20,14 +20,11 @@ h2 {
 }
 
  #rise {
-     color: rgb(107, 198, 255); 
-}
-
-#rise:active {
+    color: rgb(107, 198, 255);
     position: relative;
     animation-name: up;
     animation-duration: 4s;
-    animation-fill-mode:forwards; 
+    animation-fill-mode:forwards;
 }
 
  #set {

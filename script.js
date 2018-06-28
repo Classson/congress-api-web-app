@@ -24,9 +24,5 @@ if (navigator.geolocation) {
       }
 
       getSunInfo();
-
     })}
 
-
-const rise = document.querySelector('.rise')
-rise.addEventListener('click', _ => rise.classList.toggle('active'));

@@ -22,15 +22,27 @@ h2 {
  #rise {
     color: rgb(107, 198, 255);
     position: relative;
-    animation: up 4s, glowUp 2s;
+    animation: up 4s;
     animation-fill-mode:forwards;
 }
 
  #set {
-     color: #ffb3b3;
-     position: relative;
-     animation: down 4s, glowDown 2s;
-     animation-fill-mode:forwards;
+    color: #ffb3b3;
+    position: relative;
+    animation: down 4s;
+    animation-fill-mode:forwards;
+}
+
+#sunRise {
+    position: relative;
+    animation: glowUp 2s;
+    animation-fill-mode:forwards;
+}
+
+#sunSet {
+    position: relative;
+    animation: glowDown 2s;
+    animation-fill-mode:forwards;
 }
 
 @keyframes up {

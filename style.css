@@ -27,7 +27,7 @@ h2 {
 }
 
  #set {
-     color: rgb(193, 97, 87);
+     color: #ffb3b3;
      position: relative;
      animation: down 4s, glowDown 2s;
      animation-fill-mode:forwards;
@@ -66,6 +66,6 @@ h2 {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff6666, 0 0 70px #ff6666, 0 0 80px #ff6666, 0 0 100px #ff6666, 0 0 150px #ff6666;
   }
     to {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff6666, 0 0 35px #ff6666, 0 0 40px #ff6666, 0 0 50px #ff6666, 0 0 75px #ff6666;
+        text-shadow: 0 0 5px #330000, 0 0 10px #330000, 0 0 15px #330000, 0 0 20px #ff6666, 0 0 35px #ff6666, 0 0 40px #ff6666, 0 0 50px #ff6666, 0 0 75px #ff6666;
   }
 }

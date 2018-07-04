@@ -11,7 +11,9 @@ body {
     height: 100vh;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    align-items: center; 
+    align-items: center;
+    grid-template-areas:
+        "sunrise sunset";
 }
 
  h1 {
@@ -27,6 +29,7 @@ h2 {
     position: relative;
     animation: up 4s;
     animation-fill-mode:forwards;
+    grid-area: sunrise;
 }
 
  #set {
@@ -34,6 +37,7 @@ h2 {
     position: relative;
     animation: down 4s;
     animation-fill-mode:forwards;
+    grid-area: sunset;
 }
 
 #sunRise {

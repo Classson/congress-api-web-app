@@ -69,7 +69,7 @@ h2 {
 
 @keyframes glowUp {
     from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #00FFFFFF, 0 0 80px #00FFFFFF, 0 0 100px #00FFFFFF, 0 0 150px #00FFFFFF;
   }
     to {
         text-shadow: 0 0 5px #00001a, 0 0 10px #00001a, 0 0 15px #00001a, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
@@ -78,7 +78,7 @@ h2 {
 
 @keyframes glowDown {
     from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff6666, 0 0 70px #ff6666, 0 0 80px #ff6666, 0 0 100px #ff6666, 0 0 150px #ff6666;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00FFFFFF, 0 0 70px #00FFFFFF, 0 0 80px #00FFFFFF, 0 0 100px #00FFFFFF, 0 0 150px #00FFFFFF;
   }
     to {
         text-shadow: 0 0 5px #330000, 0 0 10px #330000, 0 0 15px #330000, 0 0 20px #ff6666, 0 0 35px #ff6666, 0 0 40px #ff6666, 0 0 50px #ff6666, 0 0 75px #ff6666;

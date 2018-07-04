@@ -16,6 +16,27 @@ body {
         "sunrise sunset";
 }
 
+@media (max-width: 400px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "sunrise"
+            "sunset";
+    }
+    
+    #rise {
+        align-items: end;
+        justify-content: flex-end;
+        padding-bottom: 0px;
+    }
+    
+    #set {
+        align-items: start;
+        padding-top: 0px;
+    }
+}
+
  h1 {
    text-align: center;
  }
@@ -26,7 +47,7 @@ h2 {
 
  #rise {
     color: rgb(107, 198, 255);
-    position: relative;
+    /*position: relative;*/
     animation: up 4s;
     animation-fill-mode:forwards;
     grid-area: sunrise;
@@ -52,7 +73,7 @@ h2 {
     animation-fill-mode:forwards;
 }
 
-@keyframes up {
+/*@keyframes up {
     0% {
         bottom: 0px;
     }
@@ -87,4 +108,4 @@ h2 {
     to {
         text-shadow: 0 0 5px #330000, 0 0 10px #330000, 0 0 15px #330000, 0 0 20px #ff6666, 0 0 35px #ff6666, 0 0 40px #ff6666, 0 0 50px #ff6666, 0 0 75px #ff6666;
   }
-}
+} */

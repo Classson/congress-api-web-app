@@ -47,7 +47,7 @@ h2 {
 #sunRise {
     position: relative;
     animation: glowUp 2s;
-    animation-fill-mode:flex-end;
+    animation-fill-mode:forwards;
 }
 
 #sunSet {
@@ -77,7 +77,7 @@ h2 {
     }
 }
 
-/*@keyframes up {
+@keyframes up {
     0% {
         bottom: 0px;
     }
@@ -112,4 +112,4 @@ h2 {
     to {
         text-shadow: 0 0 5px #330000, 0 0 10px #330000, 0 0 15px #330000, 0 0 20px #ff6666, 0 0 35px #ff6666, 0 0 40px #ff6666, 0 0 50px #ff6666, 0 0 75px #ff6666;
   }
-} */
+} 

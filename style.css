@@ -1,3 +1,4 @@
+
 body {
     background: rgb(65, 65, 65);
     background-image: url(https://images.pexels.com/photos/176851/pexels-photo-176851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
@@ -56,26 +57,35 @@ h2 {
     animation-fill-mode:forwards;
 }
 
-
 @media (max-width: 400px){
     .container{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-            "sunset"
-            "sunrise";
+        grid-template-areas:
+            "sunrise"
+            "sunset";
+    }
+    
+    div {
+        display: flex;
+        flex-direction: column;
     }
     
     #rise {
-        align-items: flex-end;
+        justify-content: flex-end;
         padding-bottom: 0px;
+        width: 100vw;
+        height: 50vh;
     }
     
+    
+    
     #set {
-        align-items: flex-start;
+        justify-content: flex-start;
         padding-top: 0px;
+        width: 100vw;
+        height: 50vh;
     }
 }
+
 
 @keyframes up {
     0% {

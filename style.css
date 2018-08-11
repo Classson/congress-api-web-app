@@ -28,7 +28,7 @@ h2 {
 }
 
  #rise {
-    color: rgb(107, 198, 255);
+    color: #f9f0b6;
     animation: up 4s;
     animation-fill-mode:forwards;
     grid-area: sunrise;
@@ -37,7 +37,7 @@ h2 {
 }
 
  #set {
-    color: #ffb3b3;
+    color: #e0d276;
     animation: down 4s;
     animation-fill-mode:forwards;
     grid-area: sunset;
@@ -120,6 +120,6 @@ h2 {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fcda00, 0 0 70px #fcda00, 0 0 80px #fcda00, 0 0 100px #fcda00, 0 0 150px #fcda00;
   }
     to {
-        text-shadow: 0 0 5px #332c02, 0 0 10px #332c02, 0 0 15px #332c02, 0 0 20px #fcda00, 0 0 35px #fcda00, 0 0 40px #fcda00, 0 0 50px #fcda00, 0 0 75px #fcda00;
+        text-shadow: 0 0 5px #00001a, 0 0 10px #00001a, 0 0 15px #00001a, 0 0 20px #fcda00, 0 0 35px #fcda00, 0 0 40px #fcda00, 0 0 50px #fcda00, 0 0 75px #fcda00;
   }
 } 

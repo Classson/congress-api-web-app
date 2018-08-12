@@ -29,6 +29,12 @@ if (navigator.geolocation) {
 let nowDate = new Date();
 offset = nowDate.getTimezoneOffset();
 console.log(offset);
-
 offsetHours = offset / 60;
 console.log(offsetHours);
+
+
+numRise = "86:03:56 AM";
+myRegex = /.[0-9]:/;
+hour = numRise.match(myRegex);
+
+console.log(hour);

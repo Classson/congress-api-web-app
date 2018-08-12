@@ -18,38 +18,50 @@ if (navigator.geolocation) {
         sunSet = sunInfo.results.sunset; 
         sunRise = sunInfo.results.sunrise;
             
-        document.getElementById('sunSetTime').innerHTML = sunSet;
-        document.getElementById('sunRiseTime').innerHTML = sunRise;
+        //get local date and calculate offset
+        let nowDate = new Date();
+        offset = nowDate.getTimezoneOffset();
+        offsetHours = offset / 60;
+
+        //regular expression to find hours in sunrise and set
+        let hourRegex = /[0-9]+:/;
+        let afterRegex = /:[0-9a-z: ]*/i;
+
+            
+        //use regExs to find hours in sunRise    
+        let hourRiseObj = sunRise.match(hourRegex);
+        let hourRise = hourRiseObj[0];
+        let intRise = parseInt(hourRise, 10);
+            
+        let afterRiseHourObj = sunRise.match(afterRegex);
+
+            
+        //use regExs to find hours in sunSet
+        let hourSetObj = sunSet.match(hourRegex);
+        let hourSet = hourSetObj[0];
+        let intSet = parseInt(hourSet, 10);
+            
+        let afterSetHourObj = sunSet.match(afterRegex);
+        
+
+        //substracting offset from hours
+        let convRiseHour = intRise - offsetHours;
+        let convSetHour = intSet - offsetHours;
+
+        //adding the converted hours back to the minutes:seconds
+        let convRise = convRiseHour + afterRiseHourObj[0];
+        let convSet = convSetHour + afterSetHourObj[0];
+            
+        // insert converted times into html  
+        document.getElementById('sunRiseTime').innerHTML = convRise;
+        document.getElementById('sunSetTime').innerHTML = convSet;
         }
       }
-
+      
       getSunInfo();
     })}
 
-let nowDate = new Date();
-offset = nowDate.getTimezoneOffset();
-console.log(offset);
-offsetHours = offset / 60;
-console.log(offsetHours);
 
-
-let numRise = "10:39:56 AM";
-//regular expression to find hours in sunrise and set
-let hourRegex = /[0-9]+:/;
-let afterRegex = /:[0-9a-z: ]*/i;
-
-let afterHourObj = numRise.match(afterRegex);
-
-let hourObj = numRise.match(hourRegex);
-let hour = hourObj[0];
-let int = parseInt(hour, 10);
-
-//substracting offset from hours
-let convHour = int - offsetHours;
-
-
-convRise = convHour + afterHourObj[0];
-console.log(convRise);
 
 
 

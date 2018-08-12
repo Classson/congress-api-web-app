@@ -1,9 +1,28 @@
+
+//geolocation to get lat and long
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function (position) {
       let currentLat = position.coords.latitude;
       let currentLong = position.coords.longitude;
+      
+    // reverse geolocation to get city and state
+      locationURL = 'https://api.geocod.io/v1.2/reverse?q=' + currentLat + ',' + currentLong + '&api_key=0f0709bb95a0b127ab111baba9575121a11ba95'
+      locationGet = new XMLHttpRequest();
+      locationGet.open('GET', locationURL, true);
+      locationGet.send();
+      locationGet.onload = function() {
+        locationInfo = JSON.parse(locationGet.responseText);
 
-        let sunUrl = "https://api.sunrise-sunset.org/json?lat=" + currentLat + "&lng=" + currentLong + "&date=today";
+        state = locationInfo.results[0].address_components.state;
+        city = locationInfo.results[0].address_components.city;
+        console.log(state);
+        console.log(city);  
+      
+        document.getElementById('city').innerHTML = city;
+      }
+      
+    // get info from sunrise-sunset api  
+    let sunUrl = "https://api.sunrise-sunset.org/json?lat=" + currentLat + "&lng=" + currentLong + "&date=today";
       
       function getSunInfo() {
         dataObject = new XMLHttpRequest();
@@ -60,8 +79,6 @@ if (navigator.geolocation) {
       
       getSunInfo();
     })}
-
-
 
 
 

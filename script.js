@@ -33,8 +33,23 @@ offsetHours = offset / 60;
 console.log(offsetHours);
 
 
-numRise = "86:03:56 AM";
-myRegex = /.[0-9]:/;
-hour = numRise.match(myRegex);
+let numRise = "10:39:56 AM";
+//regular expression to find hours in sunrise and set
+let hourRegex = /[0-9]+:/;
+let afterRegex = /:[0-9a-z: ]*/i;
 
-console.log(hour);
+let afterHourObj = numRise.match(afterRegex);
+
+let hourObj = numRise.match(hourRegex);
+let hour = hourObj[0];
+let int = parseInt(hour, 10);
+
+//substracting offset from hours
+let convHour = int - offsetHours;
+
+
+convRise = convHour + afterHourObj[0];
+console.log(convRise);
+
+
+

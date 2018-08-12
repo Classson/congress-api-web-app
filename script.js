@@ -26,3 +26,9 @@ if (navigator.geolocation) {
       getSunInfo();
     })}
 
+let nowDate = new Date();
+offset = nowDate.getTimezoneOffset();
+console.log(offset);
+
+offsetHours = offset / 60;
+console.log(offsetHours);

@@ -13,17 +13,9 @@ body {
     height: 100vh;
     grid-template-rows: 10px 1fr;
     grid-template-columns: 1fr 1fr;
-    
     align-items: center;
-    grid-template-areas:
-        "location location"
-        "sunrise sunset";
 }
 
-#location {
-    grid-area: location;
-    color: beige;
-}
 
  h1 {
      text-align: center;
@@ -88,7 +80,6 @@ h2 {
     .container{
         grid-template-areas:
             "sunrise"
-            "location"
             "sunset";
     }
     

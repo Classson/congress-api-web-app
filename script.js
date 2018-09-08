@@ -85,5 +85,57 @@ if (navigator.geolocation) {
 })
 }
 
+//function triangle(num) {
+//    let tri = '';
+//    for(let i = 0; i < num; i++){
+//        tri += '*';
+//        console.log(tri);
+//    }
+//}
+//
+//triangle(7);
 
+//Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.
+//
 
+//function fizzBuzz() {
+//    for(let i = 1; i <= 100; i++){
+//        if((i % 3 === 0) && (i % 5 === 0)){
+//            console.log('FizzBuzz')
+//        }
+//        if(i % 3 === 0){
+//            console.log('Fizz')
+//        }
+//        else if(i % 5 === 0){
+//            console.log('Buzz')
+//        }
+//        else {
+//            console.log(i)
+//        }
+//    }
+//}
+//
+//fizzBuzz();
+
+function chessBoard (num) {
+    let board = '';
+    let row = '';
+    let secNum = 1;
+    for(let j = 0; j < num; j++){
+        if(num % 2 === 0){ secNum ++;}
+        for(let i = 0; i < num; i++){
+            if(secNum % 2 === 0){
+                row += ' ';
+            }
+            else {
+                row += '#';
+            }
+            secNum += 1;
+        }
+        row += "\n"
+    }
+    board += row;
+    console.log(board);
+}
+
+chessBoard(8);

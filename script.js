@@ -1,4 +1,4 @@
-
+/*
 //geolocation to get lat and long
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function (position) 
@@ -48,7 +48,7 @@ if (navigator.geolocation) {
 
         //regular expression to find hours in sunrise and set
             let hourRegex = /[0-9]+:/;
-            let afterRegex = /:[0-9a-z: ]*/i;
+            let afterRegex = /:[0-9a-z: ]i;
 
             
         //use regExs to find hours in sunRise    
@@ -85,6 +85,8 @@ if (navigator.geolocation) {
 })
 }
 
+*/
+
 //function triangle(num) {
 //    let tri = '';
 //    for(let i = 0; i < num; i++){
@@ -117,25 +119,86 @@ if (navigator.geolocation) {
 //
 //fizzBuzz();
 
-function chessBoard (num) {
-    let board = '';
-    let row = '';
-    let secNum = 1;
-    for(let j = 0; j < num; j++){
-        if(num % 2 === 0){ secNum ++;}
-        for(let i = 0; i < num; i++){
-            if(secNum % 2 === 0){
-                row += ' ';
-            }
-            else {
-                row += '#';
-            }
-            secNum += 1;
-        }
-        row += "\n"
+//function chessBoard (num) {
+//    let board = '';
+//    let row = '';
+//    let secNum = 1;
+//    for(let j = 0; j < num; j++){
+//        if(num % 2 === 0){ secNum ++;}
+//        for(let i = 0; i < num; i++){
+//            if(secNum % 2 === 0){
+//                row += ' ';
+//            }
+//            else {
+//                row += '#';
+//            }
+//            secNum += 1;
+//        }
+//        row += "\n"
+//    }
+//    board += row;
+//    console.log(board);
+//}
+//
+//chessBoard(8);
+
+//function compareTriplets(a, b) {
+//    let resArr = [0, 0];
+//    for(let i = 0; i < 3; i++){
+//        if(a[i] > b[i]){
+//            resArr[0]++;
+//        }
+//        if(a[i] < b[i]){
+//            resArr[1]++;
+//        }
+//    }
+//    return resArr;
+//}
+//
+//let arrA = [1, 2, 3];
+//let arrB = [0, 0, 0];
+//
+//let result = compareTriplets(arrA, arrB);
+//
+//console.log(result);
+//
+//function min(a, b){
+//	if(a > b){
+//    return b;}
+//  	if(b > a){
+//    return a} 
+//  else {
+//  return `${a} and ${b} are equal`;
+//  }
+//}
+//
+//min(10, 5);
+
+/*
+We’ve seen that % (the remainder operator) can be used to test whether a number is even or odd by using % 2 to see whether it’s divisible by two. Here’s another way to define whether a positive whole number is even or odd:
+
+Zero is even.
+
+One is odd.
+
+For any other number N, its evenness is the same as N - 2.
+
+Define a recursive function isEven corresponding to this description. The function should accept a single parameter (a positive, whole number) and return a Boolean.
+
+Test it on 50 and 75. See how it behaves on -1. Why? Can you think of a way to fix this?
+*/
+
+function isEven (num) {
+    debugger;
+    if (num === 1){
+        return "false";
     }
-    board += row;
-    console.log(board);
+    if (num === 0){
+        return "true";
+    }
+    else{
+        return num = isEven(num - 2);
+    }
 }
 
-chessBoard(8);
+isEven(-1);

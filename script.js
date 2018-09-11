@@ -1,3 +1,5 @@
+// spinner overlay
+
 
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function (position){
@@ -73,8 +75,18 @@ if (navigator.geolocation) {
       
     getSunInfo();
       
+//    //loading screen
+//    function loaderFunct() {
+//    document.querySelector('sunSetTime').addEventListener('load', function(){
+//    document.getElementById("overlay").className = "hide";
+//  });
+//}
+
+loaderFunct();
+      
     })
 }
+
 
 
 

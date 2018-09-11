@@ -11,15 +11,21 @@ body {
     color: #e0d276;
 }
 
+.overlay {
+    background-image: url(https://images.pexels.com/photos/176851/pexels-photo-176851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
 .container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 100vw;
-    height: 100vh;    
+    height: 100vh;
 }
-
 
  h1 {
      text-align: center;

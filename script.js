@@ -45,8 +45,8 @@ if (navigator.geolocation) {
 
         //regular expression to find hours in sunrise and set
             let hourRegex = /[0-9]+:/;
-            let afterColonRise = sunRise.substr(sunRise.indexOf(":"));
-            let afterColonSet = sunSet.substr(sunSet.indexOf(":"));
+            let afterColonRise = sunRise.substr(sunRise.indexOf(":", 3));
+            let afterColonSet = sunSet.substr(sunSet.indexOf(":", 3));
 
             
         //use regExs to find hours in sunRise    
@@ -82,7 +82,7 @@ if (navigator.geolocation) {
 //  });
 //}
 
-loaderFunct();
+//loaderFunct();
       
     })
 }

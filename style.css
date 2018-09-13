@@ -11,11 +11,14 @@ body {
     color: #e0d276;
 }
 
-.overlay {
-    background-image: url(https://images.pexels.com/photos/176851/pexels-photo-176851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
+#overlay {
+    background-color: rgba(193, 66, 66, 0.3);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
 }
 
 .container {

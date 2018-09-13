@@ -15,8 +15,8 @@ if (navigator.geolocation) {
       locationGet.onload = function() {
           locationInfo = JSON.parse(locationGet.responseText);
 
-          state = locationInfo.results[0].address_components.state;
-          city = locationInfo.results[0].address_components.city;
+          let state = locationInfo.results[0].address_components.state;
+          let city = locationInfo.results[0].address_components.city;
           console.log(state);
           console.log(city);  
 
@@ -71,26 +71,32 @@ if (navigator.geolocation) {
             document.getElementById('sunRiseTime').innerHTML = convRise;
             document.getElementById('sunSetTime').innerHTML = convSet;
         }
-      }
-      
+    }
+    
     getSunInfo();
       
-//    //loading screen
-//    function loaderFunct() {
-//    document.querySelector('sunSetTime').addEventListener('load', function(){
-//    document.getElementById("overlay").className = "hide";
-//  });
-//}
-
-//loaderFunct();
-      
-    })
+})
 }
 
+let overlay = document.getElementById('overlay');
+    
+function loaderFunct() {
+    window.addEventListener('load', function(){
+        overlay.style.display = "none";
+        }) 
+    }
+
+loaderFunct();
+
+      
 
 
 
 
+
+
+
+   
     
     
     

@@ -26,6 +26,7 @@ if (navigator.geolocation) {
        //get info from sunrise-sunset api  
        let sunUrl = "https://api.sunrise-sunset.org/json?lat=" + currentLat + "&lng=" + currentLong + "&date=today";
       
+      
        function getSunInfo() {
         dataObject = new XMLHttpRequest();
         dataObject.open('GET', sunUrl, true);
@@ -38,6 +39,7 @@ if (navigator.geolocation) {
             sunSet = sunInfo.results.sunset; 
             sunRise = sunInfo.results.sunrise;
             
+            console.log(sunRise);
         //get local date and calculate offset
             let nowDate = new Date();
             offset = nowDate.getTimezoneOffset();
@@ -70,18 +72,19 @@ if (navigator.geolocation) {
         // insert converted times into html  
             document.getElementById('sunRiseTime').innerHTML = convRise;
             document.getElementById('sunSetTime').innerHTML = convSet;
+            console.log(convSet);
       
     getSunInfo();
+            
+            
         }
     }
-    
-      
-    let overlay = document.getElementById('overlay');
-    
 })
 }
 
- function loaderFunct() {
+let overlay = document.getElementById('overlay');
+
+function loaderFunct() {
     window.addEventListener('load', function(){
         overlay.style.display = "none";
         }) 
@@ -89,20 +92,26 @@ if (navigator.geolocation) {
 
 loaderFunct();
 
-window.onload = function(){
-	
-    var sunRiseBtn = document.getElementById('sunRise');
-    sunRiseBtn.onclick = function(event){
-		sunRiseBtn.children[0].classList.add('up');
-        setTimeout(function(){
-        	sunRiseBtn.children[0].classList.remove('up');
-        }, 500);
-    }
-    
-}
 
-
-
+//
+//window.onload = function(){
+//	
+//    var sunRiseBtn = document.getElementById('sunRise');
+//    sunRiseBtn.onclick = function(event){
+//		sunRiseBtn.classList.add('up');
+//        setTimeout(function(){
+//        	sunRiseBtn.classList.remove('up');
+//        }, 500);
+//    }
+//    
+//}
+//
+//
+//
+//document.getElementById('location').onload = function(){
+//    overlay.style.display = "none";
+//    
+//}
 
 
 

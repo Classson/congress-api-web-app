@@ -70,17 +70,18 @@ if (navigator.geolocation) {
         // insert converted times into html  
             document.getElementById('sunRiseTime').innerHTML = convRise;
             document.getElementById('sunSetTime').innerHTML = convSet;
+      
+    getSunInfo();
         }
     }
     
-    getSunInfo();
       
+    let overlay = document.getElementById('overlay');
+    
 })
 }
 
-let overlay = document.getElementById('overlay');
-    
-function loaderFunct() {
+ function loaderFunct() {
     window.addEventListener('load', function(){
         overlay.style.display = "none";
         }) 
@@ -88,8 +89,17 @@ function loaderFunct() {
 
 loaderFunct();
 
-      
-
+window.onload = function(){
+	
+    var sunRiseBtn = document.getElementById('sunRise');
+    sunRiseBtn.onclick = function(event){
+		sunRiseBtn.children[0].classList.add('up');
+        setTimeout(function(){
+        	sunRiseBtn.children[0].classList.remove('up');
+        }, 500);
+    }
+    
+}
 
 
 

@@ -11,16 +11,6 @@ body {
     color: #e0d276;
 }
 
-#overlay {
-    background-color: rgba(193, 66, 66, 0.3);
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 10000;
-}
-
 .container {
     display: flex;
     flex-direction: row;

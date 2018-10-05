@@ -1,5 +1,3 @@
-// spinner overlay
-
 
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function (position){
@@ -82,40 +80,6 @@ if (navigator.geolocation) {
 }
 
 
-let overlay = document.getElementById('overlay');
-
-function loaderFunct() {
-    window.addEventListener('load', function(){
-        overlay.style.display = "none";
-        }) 
-    }
-
-loaderFunct();
-
-
-//
-//window.onload = function(){
-//	
-//    var sunRiseBtn = document.getElementById('sunRise');
-//    sunRiseBtn.onclick = function(event){
-//		sunRiseBtn.classList.add('up');
-//        setTimeout(function(){
-//        	sunRiseBtn.classList.remove('up');
-//        }, 500);
-//    }
-//    
-//}
-//
-//
-//
-//document.getElementById('location').onload = function(){
-//    overlay.style.display = "none";
-//    
-//}
-
-
-
-   
     
     
     

@@ -32,14 +32,14 @@ if (navigator.geolocation) {
         dataObject.open('GET', sunUrl, true);
         dataObject.send();
         dataObject.onload = function() {
-
+            
+            
             sunInfo = JSON.parse(dataObject.responseText);
-            console.log(sunInfo);
+            sunInfo = JSON.parse(dataObject.responseText);
         
             sunSet = sunInfo.results.sunset; 
             sunRise = sunInfo.results.sunrise;
             
-            console.log(sunRise);
         //get local date and calculate offset
             let nowDate = new Date();
             offset = nowDate.getTimezoneOffset();
@@ -73,14 +73,14 @@ if (navigator.geolocation) {
             document.getElementById('sunRiseTime').innerHTML = convRise;
             document.getElementById('sunSetTime').innerHTML = convSet;
             console.log(convSet);
-      
-    getSunInfo();
-            
-            
-        }
-    }
+                       
+        }}
+ 
+     //function call
+      getSunInfo();
 })
 }
+
 
 let overlay = document.getElementById('overlay');
 

@@ -9,6 +9,7 @@ body {
 
 #location {
     color: #e0d276;
+    padding-top: 20px;
 }
 
 .container {
@@ -38,7 +39,7 @@ h2 {
 }
 
  #set {
-    color: #e0d276;
+    color: #f9f0b6;
     animation: down 4s;
     animation-fill-mode:forwards;
     position: relative;
@@ -128,18 +129,22 @@ h2 {
 
 @keyframes glowUp {
     from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffff89, 0 0 70px #ffff89, 0 0 80px #ffff89, 0 0 100px #ffff89, 0 0 150px #ffff89;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffff89, 0 0 30px #ffff89, 0 0 40px #ffff89, 0 0 60px #ffff89, 0 0 110px #ffff89;
   }
     to {
-        text-shadow: 0 0 5px #00001a, 0 0 10px #00001a, 0 0 15px #00001a, 0 0 20px #ffff89, 0 0 35px #ffff89, 0 0 40px #ffff89, 0 0 50px #ffff89, 0 0 75px #ffff89;
+        text-shadow: 0 0 5px #00001a, 0 0 10px #00001a, 0 0 15px #00001a, 0 0 50px #ffff89, 0 0 75px #ffff89, 0 0 80px #ffff89, 0 0 100px #ffff89, 0 0 115px #ffff89;
   }
 }
 
 @keyframes glowDown {
+    
     from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fcda00, 0 0 70px #fcda00, 0 0 80px #fcda00, 0 0 100px #fcda00, 0 0 150px #fcda00;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 50px #ffff89, 0 0 75px #ffff89, 0 0 80px #ffff89, 0 0 100px #ffff89, 0 0 115px #ffff89;
   }
+    
     to {
-        text-shadow: 0 0 5px #00001a, 0 0 10px #00001a, 0 0 15px #00001a, 0 0 20px #fcda00, 0 0 35px #fcda00, 0 0 40px #fcda00, 0 0 50px #fcda00, 0 0 75px #fcda00;
+        text-shadow: 0 0 5px #00001a, 0 0 10px #00001a, 0 0 15px #00001a, 0 0 40px #ffff89, 0 0 30px #ffff89, 0 0 40px #ffff89, 0 0 60px #ffff89, 0 0 100px #ffff89;
   }
+    
+
 } 

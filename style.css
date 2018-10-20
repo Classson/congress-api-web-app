@@ -7,6 +7,16 @@ body {
     font-family: sans-serif;
 }
 
+#overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(244, 95, 66, .5);
+}
+
 #location {
     color: #e0d276;
     padding-top: 20px;

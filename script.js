@@ -79,7 +79,13 @@ if (navigator.geolocation) {
 })
 }
 
-
+// spinner overlay
+function loaderFunct() {
+  document.querySelector('sunRiseTime').addEventListener('load', function(){
+  document.getElementById("overlay").className = "hide";
+});
+}
+loaderFunct();
     
     
     

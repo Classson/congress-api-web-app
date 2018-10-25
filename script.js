@@ -1,3 +1,4 @@
+$(document).ready(function() {
 
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function (position){
@@ -80,6 +81,15 @@ if (navigator.geolocation) {
 }
 
 
+// spinner overlay
+function loaderFunct() {
+    console.log('running');
+  document.querySelector('#sunRise').addEventListener('load', function(){
+  document.getElementById("overlay").className = "hide";
+});
+}
+loaderFunct();
     
+})
     
     
